@@ -4,10 +4,10 @@ import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.Button
-import androidx.compose.material.ButtonDefaults
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -55,8 +55,28 @@ fun MyButton() {
 }
 
 @Composable
+@Preview
 fun MyRadioGroup() {
-    //TODO add your code here
+    val radioButtons = listOf(0, 1, 2)
+
+    val selectedButton = remember { mutableStateOf(radioButtons.first())}
+    
+    Column() {
+        radioButtons.forEach { index ->
+            val isSelected = index == selectedButton.value
+            val colors = RadioButtonDefaults.colors(
+                selectedColor = colorResource(id = R.color.purple_500),
+                unselectedColor = colorResource(id = R.color.black),
+                disabledColor = Color.LightGray
+            )
+
+            RadioButton(
+                colors = colors,
+                selected = isSelected,
+                onClick = { selectedButton.value = index }
+            )
+        }
+    }
 }
 
 @Composable
