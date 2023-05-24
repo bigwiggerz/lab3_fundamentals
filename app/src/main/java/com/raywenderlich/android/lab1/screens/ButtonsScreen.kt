@@ -84,12 +84,12 @@ fun MyRadioGroup() {
 @Composable
 @Preview
 fun MyFloatingActionButton() {
-        FloatingActionButton(
-            onClick = {},
-            backgroundColor = colorResource(id = R.color.purple_700),
-            contentColor = Color.White,
-            content = {
-                Icon(Icons.Filled.Favorite, contentDescription = "Test FAB")
-            }
-        )
+    FloatingActionButton(
+        onClick = {},
+        backgroundColor = colorResource(id = R.color.purple_700),
+        contentColor = Color.White,
+        content = {
+            Icon(Icons.Filled.Favorite, contentDescription = "Text FAB")
+        }
+    )
 }
