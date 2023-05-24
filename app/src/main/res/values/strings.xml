@@ -1,4 +1,5 @@
 <resources>
+    <string name="Surface">Контейнер Surface</string>
     <string name="Box">Контейнер Box</string>
     <string name="Column">Контейнер Column</string>
     <string name="Row">Контейнер Row</string>
