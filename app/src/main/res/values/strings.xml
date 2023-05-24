@@ -1,4 +1,7 @@
 <resources>
+    <string name="third">Третий</string>
+    <string name="second">Второй</string>
+    <string name="first">Первый</string>
     <string name="app_name">Lab1</string>
     <string name="massage_button">Закрыть</string>
     <string name="insert_text">Введите текст</string>
