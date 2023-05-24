@@ -1,4 +1,5 @@
 <resources>
+    <string name="Column">Контейнер Column</string>
     <string name="Row">Контейнер Row</string>
     <string name="third">Третий</string>
     <string name="second">Второй</string>
