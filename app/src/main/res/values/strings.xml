@@ -1,4 +1,13 @@
 <resources>
+    <string name="architecture">Усовершенствонная архитектура Android </string>
+    <string name="learn_kotlin">Изучение Kotlin</string>
+    <string name="coroutines">Корутины в Kotlin</string>
+    <string name="scroll">Прокрутка</string>
+    <string name="android">Android</string>
+    <string name="kotlin">Kotlin</string>
+    <string name="swift">Swift</string>
+    <string name="ios">iOS</string>
+    <string name="covers">Covers</string>
     <string name="menu">Меню</string>
     <string name="Scaffold">Контейнер Scaffold</string>
     <string name="Surface">Контейнер Surface</string>

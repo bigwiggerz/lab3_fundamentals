@@ -4,6 +4,8 @@ package com.raywenderlich.android.lab1.screens
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Button
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -19,12 +21,13 @@ import com.raywenderlich.android.lab1.router.FundamentalsRouter
 import com.raywenderlich.android.lab1.router.Screen
 
 @Composable
-fun NavigationScreen() {
+fun NavigationScreen(modifier: Modifier = Modifier) {
     Surface(
         color = Color.White,
         modifier = Modifier.fillMaxSize()
     ) {
         Column(
+            modifier = modifier.verticalScroll(rememberScrollState()),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
@@ -39,6 +42,7 @@ fun NavigationScreen() {
             NavigationButton(stringResource(id = R.string.Box), Screen.Box)
             NavigationButton(stringResource(id = R.string.Surface), Screen.Surface)
             NavigationButton(stringResource(id = R.string.Scaffold), Screen.Scaffold)
+            NavigationButton(stringResource(id = R.string.scroll), Screen.Scrolling)
         }
     }
 }
