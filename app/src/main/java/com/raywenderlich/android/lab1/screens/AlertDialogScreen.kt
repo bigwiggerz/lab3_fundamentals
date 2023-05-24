@@ -7,8 +7,9 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.ui.graphics.BlendMode.Companion.Color
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
+import com.raywenderlich.android.lab1.R
 import com.raywenderlich.android.lab1.router.BackButtonHandler
 import com.raywenderlich.android.lab1.router.FundamentalsRouter
 import com.raywenderlich.android.lab1.router.Screen
@@ -27,25 +28,25 @@ fun AlertDialogScreen() {
 fun MyAlertDialog() {
     val shouldShowDialog = remember { mutableStateOf(true) }
 
-    if (shouldShowDialog.value) {
+    if (shouldShowDialog.value){
         AlertDialog(
             onDismissRequest = {
                 shouldShowDialog.value = false
-                JetFundamentalsRouter.navigateTo(Screen.Navigation)
+                FundamentalsRouter.navigateTo(Screen.Navigation)
             },
 
-            title = { Text(text = stringResource(id = "Внимание")) },
-            text = { Text(text = stringResource(id = "Это диалоговое окно"))},
+            title = { Text(text = stringResource(id = R.string.title_alertDialog))},
+            text = { Text(text = stringResource(id = R.string.alertDialog_about))},
             confirmButton = {
                 Button(
-                    colors = ButtonDefaults.buttonColors(backgroundColor = Color.blue),
+                    colors = ButtonDefaults.buttonColors(backgroundColor = Color.Blue),
                     onClick = {
                         shouldShowDialog.value = false
-                        JetFundametalsRouter.navigateTo(Screen.Navigation)
+                        FundamentalsRouter.navigateTo(Screen.Navigation)
                     }
                 ) {
                     Text(
-                        text = stringResource(id = "Закрыть"),
+                        text = stringResource(id = R.string.massage_button),
                         color = Color.White
                     )
                 }
